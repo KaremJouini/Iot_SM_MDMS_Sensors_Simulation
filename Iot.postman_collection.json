@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "cf277ea1-9709-43da-9439-97421f75949e",
+		"name": "Iot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a flow data sm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"source\":\"SM\",\n    \"destination\":\"MDMS\",\n    \"libelle\":\"consommation\",\n    \"frequency\":\"1/60\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/flow/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"flow",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a pricing data mdms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"source\":\"MDMS\",\n    \"destination\":\"SM\",\n    \"libelle\":\"pricing\",\n    \"frequency\":\"1/60\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/flow/pricing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"flow",
+						"pricing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add tension data mdms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"source\":\"MDMS\",\n    \"destination\":\"SM\",\n    \"libelle\":\"tension\",\n    \"frequency\":\"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/flow/tension",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"flow",
+						"tension"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
